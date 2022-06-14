@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 100px auto;
+            width: 800px;
+            height: 600px;
+            background-color: pink;
+            display: flex;
+            /* 侧轴的对齐方式 */
+            /* align-items: flex-start; */
+            /* 默认的对齐方式  默认拉伸和父亲一样高度 */
+            /* align-items: stretch; */
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            /* justify-content: center; */
+            
+        }
+        .box div{
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+            /* margin-top: 100px; */
+        }
+        .box div:nth-child(2n) {
+            background-color: skyblue;
+            align-self: flex-end;
+        }
+        .box div:nth-child(3n) {
+            /* background-color: skyblue; */
+            /* 单独控制某个子盒子 给子盒子侧轴对齐 */
+            align-self: center;
+        }
+        /* .box div:nth-child(1){
+            margin-left: 50px;
+        } */
+
+        /* 
+            使用align-items调节元素在侧轴的对齐方式
+                修改侧轴对齐的属性
+                    align-items (添加到弹性容器-父级)
+                    align-srlf 控制某个弹性盒子在侧轴的对齐方式(添加到弹性盒子 - 子级)
+                
+                属性值和作用
+                    flex-start  起点开始依次排列
+                    flex-end 终点开始一次排序
+                    center  沿侧轴居中排列
+                    stretch  默认效果 弹性盒子沿着测轴线被拉伸至铺满容器
+
+        */
+    </style>
+    
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <!-- <div>4</div> -->
+    </div>
+</body>
+</html>

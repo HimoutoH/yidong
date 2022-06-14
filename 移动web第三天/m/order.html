@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>填写订单</title>
+    <!-- 引入初始化css文件 -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- 引入字体图标字体文件 -->
+    <link rel="stylesheet" href="./lib/iconfont/iconfont.css">
+    <!-- 引入自己的css文件 -->
+    <link rel="stylesheet" href="./css/order.css">
+</head>
+
+<body>
+    <!-- 主体部分 -->
+    <main class="main">
+        <!-- 订单模块 -->
+        <div class="order-msg">
+            <div class="location">
+                <i class="iconfont icon-location"></i>
+            </div>
+            <div class="info">
+                <p><span>林丽</span> 1388888888</p>
+                <p>北京市 海淀区 中关村软件园 信息科技大厦1号
+                    楼410#
+                </p>
+            </div>
+            <a href="#" class="more">
+                <i class="iconfont icon-more"></i>
+            </a>
+        </div>
+        <!-- 商品信息模块 -->
+        <div class="goods">
+            <div class="pic">
+                <img src="./uploads/pic.png" alt="">
+            </div>
+            <div class="goods-info">
+                <h4>康贝尔 非接触式红外体温仪</h4>
+                <p>领券立减30元 婴儿级材质 测温…</p>
+                <div class="color">粉色 红外体温计</div>
+                <!-- del删除线 -->
+                <div><span>¥<em>266</em> </span><del>299</del></div>
+            </div>
+            <div class="count">
+                    <i class="iconfont icon-x"></i>1
+            </div>
+        </div>
+
+        <!-- 配送模板 -->
+        <div class="panel">
+            <div class="express">
+                <p>配送方式</p>
+                <p>顺丰快递</p>
+            </div>
+            <div class="remark">
+                <p>卖家备注</p>
+                <p>希望可以尽快发货谢谢特别特别备注 不要辣 不要辣不要辣不要辣不要辣 不要辣不要辣不要辣不要辣 不要辣不要辣不要辣不要辣 不要辣不要辣不要辣不要辣 不要辣不要辣不要辣不要辣 不要辣不要辣不要辣不要辣 不要辣不要辣不要辣</p>
+            </div>
+            <div class="payment">
+                <p>支付方式</p>
+                <p>支付宝 ></p>
+            </div>
+        </div>
+        <div class="di">
+            <div class="box1">
+                <p>商品总价</p>
+                <p>¥299.0</p>
+            </div>
+            <div class="box2">
+                <p>运费</p>
+                <p>¥0.00</p>
+            </div>
+            <div class="box3">
+                <p>折扣</p>
+                <span>-¥30.00</span>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- 底部支付模块 -->
+    <footer class="pay-orter">
+        <div class="sum">
+            合计: <span>￥ <em>266.00</em></span>
+        </div>
+        <div class="pay">
+            <a href="#">去支付</a>
+        </div>
+    </footer>
+</body>
+
+</html>

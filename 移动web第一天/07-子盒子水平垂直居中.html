@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子盒子水平垂直居中</title>
+    <style>
+        /* 定位 */
+        .fatehr{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+        /* 定位 */
+        /* .son{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+
+        } */
+        /* 第二种定位 */
+        /* .son{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin:  auto;
+        } */
+        .son{
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            /* 子盒子水平居中 */
+            transform: translate(-50%,-50%);
+            background-color: purple;
+            position: absolute; 
+            transition: all .4s;
+        }
+        /* 经过父盒子让子盒子旋转 */
+        .fatehr:hover .son{
+            transform:  translate(-50%,-50%)  rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="fatehr">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            /* 去除li的小点点 */
+            list-style: none;
+        }
+
+        .nav {
+            margin: 100px;
+        }
+
+        .nav li {
+            width: 150px;
+            height: 50px;
+            background-color: pink;
+            float: left;
+            margin: 0 20px;
+            /* 透视 */
+            perspective: 500px;
+        }
+
+        .nav li a {
+            /* 转换成块元素 */
+            display: block;
+            width: 100%;
+            height: 100%;
+            /* 去除a标签下划线 */
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            /* 子绝对定位 父相对定位   子绝父相 */
+            position: relative;
+            transition: all .4s;
+            /* 让子盒子立体空间 */
+            transform-style: preserve-3d;
+
+        }
+
+        .nav li a span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            /* 水平垂直居中 */
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .nav li span:nth-child(1) {
+            background-color: orange;
+            /* 上面盒子 沿着x轴旋转90°
+                    往上走25px  -值
+            */
+            transform: translateY(-25px) rotateX(90deg);
+        }
+
+        .nav li span:nth-child(2) {
+            background-color: green;
+            /* 往我们前面移动 25px  z轴 */
+            transform: translateZ(25px);
+        }
+
+        .nav li a:hover {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <span>index</span>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>index</span>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>index</span>
+                    <span>首页</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

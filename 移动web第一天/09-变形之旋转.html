@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变形之旋转</title>
+    <style>
+        img{
+            /* 过渡效果 */
+            transition:all .3s;
+        }
+        img:hover{
+            /* 变形 旋转 */
+            /* 如果正值是顺时针 如果是负值就是逆时针 */
+            transform: rotate(180deg);
+        }
+        /* 三角形做法 */
+        .box{
+            width: 50px;
+            height: 50px;
+            border-right: 1px solid pink;
+            border-bottom: 1px solid pink;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/p4-tx3.png" alt="">
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车案例</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3395208_scpx0y9e26.css">
+    <style>
+        /* 
+            i 是倾斜的标签 
+                但是为什么不倾斜，因为字体图标里面有一个font-style:normal;  让倾斜的字体不倾斜
+        */
+        .car{
+            width: 200px;
+            height: 40px;
+            border: 1px pink solid;
+            /* 垂直居中 */
+            line-height: 40px;
+            /* 水平居中 */
+            text-align: center;
+            margin-top: 40px;
+        }
+        .icon-gouwuche {
+            
+            margin-right: 5px;
+            color: red;
+            font-size: 25px;
+        }
+        .car:hover{
+            transform: translateY(-5px);
+            color: greenyellow;
+
+        }
+        .icon-gouwuche:hover{
+            color: greenyellow;
+        }
+        .icon-a-12-xia:hover{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="car">
+        <i class="iconfont icon-gouwuche"></i>
+        购物车
+        <i class="iconfont icon-a-12-xia"></i>
+    </div>
+</body>
+</html>

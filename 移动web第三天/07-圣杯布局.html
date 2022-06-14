@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣杯布局</title>
+    <style>
+        /* 
+            圣杯布局是比较典型的布局
+            所谓的圣杯布局就是左右两边大小固定不变 中间宽度自适应
+            一般这种布局方式适用于各种移动端顶部搜索部分 这是最常见的 如京东手机版主页顶部搜索
+        */
+        .box {
+            width: 80%;
+            height: 150px;
+            margin: 100px auto;
+            border: 1px solid red;
+            display: flex;
+            /* 防止盒子变得太小 变形 */
+            min-width: 800px;
+        }
+        .box div{
+            width: 100px;
+            background-color: pink;
+        }
+        .box div:nth-child(2) {
+            background-color: skyblue;
+            flex: 1;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

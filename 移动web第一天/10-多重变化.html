@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100%;
+            border: 1px solid pink;
+        }
+        .box:hover img{
+            /* 多重变换 先移动 后旋转 用空格隔开 */
+            transform:  translateX(400px) rotate(360deg)  ;
+            /* 图片还要加移动效果 */
+            /* transform: translate(400px); */
+        }
+        img{
+            transition: 6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../images/p4-tx3.png" alt="">
+    </div>
+</body>
+</html>

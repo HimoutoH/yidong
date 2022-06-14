@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: pink;
+            text-align: center;
+            line-height: 200px;
+            animation: move 4s ease;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(500px,0);
+            }
+
+            50% {
+                transform: translate(500px,500px);
+            }
+
+            75% {
+                transform: translate(0,500px);
+            }
+
+            100% {
+                transform: translate(0,0);
+            }
+        }
+
+        /* 
+            动画的足底啊特点 不用鼠标触发就可以自动反复执行某些动画
+                动画使用分为定义和调用
+
+            定义动画
+                @keyframes dance {
+                    0%{
+                        transform：scale(1)
+                    }
+                    100%{
+                        transform:scale(1.5)
+                    }
+                }
+
+            调用
+                img{
+                    w200px
+                    使用动画 animation：动画名称 执行时间  infinite 循环
+                    animation：dance .5s infinite
+
+                }
+
+            动画属性
+                animation：动画名称 动画时长 速度曲线 延迟时间 重复次数 动画方向 执行完毕状态
+                    注意
+                        动画名称和动画时长必须赋值
+                        取值部分先后顺序
+                        如果有两个时间线 第一个事件表示动画时长 第二个时间表示延迟时间
+                        速度曲线如下
+                            linear  动画从头到尾的速度是相同的
+                            ease  默认 动画以低速开始 然后加快速度 在结束前变慢
+                            ease-in 动画以低速开始
+                            ease-out 动画以低速结束
+                            ease-in-out 动画以低速开始和结束
+        */
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+</body>
+
+</html>

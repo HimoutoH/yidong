@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用伪元素</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3395208_scpx0y9e26.css">
+    <style>
+        .box{
+            width: 200px;
+            height: 40px;
+            border: 1px pink solid;
+        }
+        .box::after{
+            content: '\e8d3';
+               /* 垂直居中 */
+            line-height: 40px;
+            float: right;
+            margin-right: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box iconfont"></div>
+</body>
+</html>

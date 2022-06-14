@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改变主轴方向</title>
+    <style>
+
+        /* 
+            使用flex-direction改变元素排列方向
+            主轴默认是水平方向 侧轴默认垂直方向
+            修改主轴方向的属性:flex-direction
+                属性值和作用
+                row  行 水平 默认值
+                column  *列 垂直
+                row-reverse  行 从右向左
+                column-reverse   列 从下向上
+                
+        */
+        .box{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            display: flex;
+            /* 默认行 */
+            /* flex-direction: row; */
+
+            /* 修改主轴方向 列 */
+            flex-direction: column;
+            /* 修改后居中对齐 */
+            justify-content: center;
+            /* 侧轴 */
+            align-items: center;
+        }
+        .box div{
+            width: 150px;
+            height: 150px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+    </div>
+</body>
+</html>

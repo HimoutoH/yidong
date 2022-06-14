@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100%;
+            height: 400px;
+            background-color: pink;
+        }
+
+        /* 
+            布局视口
+                layout viewport
+                    一般移动设备的浏览器都默认设置了一个布局视口 用于解决早期的pc端页面在手机上显示的问题
+                    ios android基本都将这个视口分辨率设置为980px 所以pc端上的网页大多都能在手机上呈现
+                        只不过元素看起来很小 一般默认可以通过手机缩放网页
+            视觉视口
+                visual viewport
+                    字面意思 它是用户正在看到的网站的区域 注意 是网站的区域
+                    我们可以通过缩放去操作视觉视口 但不会影响布局视口 布局视口仍保持原来的宽度
+            理想视口
+                ideal viewport
+                    为了使网站在移动端有理想的浏览器和阅读宽度而设定
+                    理想视口 对设备来讲 是最理想的视口尺寸
+                    简单理解 设备多款 我的网页就显示多宽
+            
+            视口是什么
+                视口就是浏览器显示页面内容的屏幕区域
+            视口分为哪三类
+                布局视口
+                视觉视口
+                理想视口
+            怎么去理解理想视口
+                设备多宽我们网页就有多宽
+        */
+
+        /* 
+            使用meta标签设置视口宽度 制作适配不同设备宽度的网页
+                目标 网页宽度和设备宽度分辨率相同
+                解决办法 添加视口标签、
+        */
+
+        /* 
+            viewport：视口
+                - width = device-width：收口宽度 = 设备宽度
+                - initial-scale = 1.0：初始页面缩放倍数
+                - aximum-scale = 1.0 最大缩放倍数
+                - user-scalable = 0 不允许用户网页缩放(移动端) 或者为no 如果为ye 则允许用户缩放
+                - 京东移动写法如下
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+                    
+        
+        */
+
+    .box>div{
+        width: 20%;
+        height: 100px;
+        float: left;
+    }
+    .box div:nth-child(even) {
+        background-color: pink;
+    }
+    .box div:nth-child(odd) {
+        background-color: purple;
+    }
+    </style>
+</head>
+<body>
+    看看移动端的页面
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开门效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            overflow: hidden;
+            width: 1366px;
+            height: 600px;
+            background: url(../images/bg.jpg) no-repeat;
+            margin: 100px auto;
+        }
+        .box::before,
+        .box::after{
+            float: left;
+            content: "";
+            width: 50%;
+            height: 100%;
+            background-image: url(../images/fm.jpg);
+        }
+        .box::before{
+            background-color: pink;
+            /* 谁做动画给谁加动画效果 */
+            transition: .3s;
+            
+        }
+        .box::after{
+            background-color: rgb(128, 38, 86);
+            background-position: right;
+            transition: .3s;
+        }
+        /* 鼠标经过大盒子左右盒子分别拉开 */
+        .box:hover::before{
+            transform: translateY(-100%);
+            /* transform: translateX(-100%); */
+        }
+        .box:hover::after{
+            transform: translateY(100%);
+            /* transform: translateX(1000%); */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画的基本使用</title>
+    <style>
+        /* 
+                使用animation添加动画效果
+
+                    动画效果：实现多个状态间的变化过程 动画过程可控(重复播放 最终画面 是否暂停)
+
+                - 动画的本质是快速切换大量图片时在人脑中形成的具有连续性动画
+                - 构成动画的最小单元 帧或动画帧
+
+            动画的实现步骤
+                1. 定义动画
+                    @keyframes 动画名称{
+                        from{}
+                        to{}
+                    }
+                2. 使用动画
+            */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 圆角 */
+            border-radius: 50%;
+            text-align: center;
+            line-height: 200px;
+            /* 2. 调用动画 */
+            /* animation: 动画名称 持续时间 ;   动画的意思*/
+            animation: move 5s;
+        }
+
+        /* 定义动画 */
+        @keyframes move {
+            /* 起始帧 */
+            /* from{}  因为没有 所以不写*/
+            from{
+                transform: translateX(0px);
+            }
+            /* 结束帧 */
+            /* 1 turn 就是一圈 360deg */
+            to{
+                transform: translateX(500px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">123</div>
+</body>
+
+</html>
